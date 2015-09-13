@@ -1,0 +1,47 @@
+<div class="container products-page">
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+    <div class="row">
+    <% @products.each do |product| %>
+        <% if product.name == "registration" %>
+            <% next %>
+        <% end %>
+        <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 item-box">
+                <% if product.name == "pre-registration" %>
+                    <%= image_tag('bogo.jpg', width: '328', height: '218', class: 'img img-responsive') %>
+                <% elsif product.name == "friday game night" %>
+                    <%= image_tag('gameNight.jpg', width: '328', height: '218', class: 'img img-responsive') %>
+                <% elsif product.name == "comedy show" %>
+                    <%= image_tag('comedyShow.jpg', width: '328', height: '218', class: 'img img-responsive') %>
+                <% elsif product.name == "murder mystery" %>
+                    <%= image_tag('murderMystery.jpg', width: '328', height: '218', class: 'img img-responsive') %>
+                <% else %>
+                    <%= image_tag('Ticket.jpg', class: 'img img-responsive') %>
+                <% end %>
+                <ul class="list-unstyled list-inline">
+                    <li><label><%= product.name %></label></li>
+                    <li class="pull-right"><label>$<%= product.price %></label></li>
+
+                </ul>
+            </div>
+            <div class="well col-xs-12 lower-panel">
+                <%= form_for :product, url: cart_products_path(:product_id => product.id), method: :post do |f| %>
+                <div class="col-xs-6">
+                    <% if product.name == "pre-registration" %>
+                    <%= select_tag 'quantity', options_for_select([2,4,6,8,10], (@cart.itemizations.find_by(product_id: product.id) != nil) ? @cart.itemizations.find_by(product_id: product.id).quantity : 1), class: 'form-control input-sm' %>
+                    <% else %>
+                        <%= select_tag 'quantity', options_for_select(1..10, (@cart.itemizations.find_by(product_id: product.id) != nil) ? @cart.itemizations.find_by(product_id: product.id).quantity : 1), class: 'form-control input-sm' %>
+                    <% end %>
+                </div>
+                <div class="col-xs-6">
+                    <%= f.submit 'Add To Cart', class: 'btn btn-primary btn-sm pull-right add-to-cart-button', :remote => true %>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
+    <br />
+    <br />
+    </div>

@@ -1,0 +1,41 @@
+<div class="container cart-show-page">
+<% flash.each do |key, value| %>
+    <div id="flash_notice" class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+    <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Current Cart</div>
+        <div class="panel-body"></div>
+
+        <!-- List group -->
+        <table class="table">
+            <tbody>
+                <% @cart.products.each do |product| %>
+                    <tr>
+                        <%= form_for :product, url: cart_product_path(:product_id => product.id), :method => :patch do |f| %>
+                            <td><%= product.name %></td>
+                            <td><%= product.price %></td>
+                            <td>
+                                <div class="col-xs-12 col-md-6 col-lg-4 pull-right">
+                                    <%= select_tag 'quantity', options_for_select(1..10, (@cart.itemizations.find_by(product_id: product.id) != nil) ? @cart.itemizations.find_by(product_id: product.id).quantity : 1), class: 'form-control input-sm select-quantity' %>
+
+                                </div>
+                            </td>
+                            <td>
+                                <%= f.submit 'Update', class: 'btn btn-warning btn-sm pull-right' %>
+                            </td>
+                            <td>
+                                <%= link_to 'Delete', cart_product_path(:product_id => product.id), :method => :delete, :class => 'btn btn-danger btn-sm pull-left' %>
+
+                            </td>
+                        <% end %>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+        <div class="panel-footer">
+            <label>Total: $ <%= @cart.total %></label>
+            <%= link_to 'Checkout', new_order_path, class: 'btn btn-primary cart-button col-xs-offset-9 col-lg-offset-11', disabled: (@cart.products.length == 0) ? true : false %>
+        </div>
+    </div>
+</div>

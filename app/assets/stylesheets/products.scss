@@ -1,0 +1,44 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*.products-page {
+    background-color: #EEE;
+}*/
+/*.products-panel {
+    background-color: white;
+    height: 600px;
+}
+
+.item {
+    border: 1px solid #EEE;
+    padding: 20px;
+    margin-top: 10px;
+}*/
+.cart-button {
+    /*margin-top: 60px;
+    margin-bottom: 10px;*/
+    /*float: right;*/
+    margin-right: 15px;
+}
+
+.item-box {
+    background-color: white;
+    border: 1px solid #d3e0e9;
+    border-radius: 10px 10px 0px 0px;
+}
+select#quantity {
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.add-to-cart-button {
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.lower-panel {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.item-box img {
+    height: 218px;
+}

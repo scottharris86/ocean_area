@@ -1,0 +1,65 @@
+<div class="clearfix">
+<% if params[:order_info] %>
+<% p = params[:order_info] %>
+<%= simple_form_for :order_info, url: orders_path do |f| %>
+    <div class="col-xs-12">
+    <%= f.input :first_name, label: false, placeholder: 'First Name', :input_html => { :value => p[:first_name] } %>
+    </div>
+    <div class="col-xs-12">
+    <%= f.input :last_name, label: false, placeholder: 'Last Name', :input_html => { :value => p[:last_name] } %>
+    </div>
+    <div class="col-xs-12">
+    <%= f.input :email, label: false, placeholder: 'Email', :input_html => { :value => p[:email] } %>
+    </div>
+    <div class="col-xs-12">
+    <%= f.input :phone, label: false, placeholder: 'Phone', :input_html => { :value => p[:phone] } %>
+    </div>
+    <div class="col-xs-12">
+    <%= f.input :credit_card, label: false, placeholder: 'Credit Card Number', :input_html => { :value => p[:credit_card] } %>
+    </div>
+    <div class="col-xs-6">
+    <%= f.input :exp_month, label: false, placeholder: 'MM', :input_html => { :value => p[:exp_month] } %>
+    </div>
+    <div class="col-xs-6">
+    <%= f.input :exp_year, label: false, placeholder: 'YYYY', :input_html => { :value => p[:exp_year] } %>
+    </div>
+    <div class="col-xs-12">
+    <br />
+    <br />
+    <%= f.submit 'Checkout', class: 'btn btn-block btn-success', disabled: (@cart.products.length == 0) ? true : false %>
+    <p class="help-block">By clicking checkout you are authorizing the Ocean Area Convention to charge your credit card for the total amount of your order</p>
+    </div>
+<% end %>
+<% else %>
+<%= simple_form_for :order_info, url: orders_path do |f| %>
+    <div class="col-xs-12">
+    <%= f.input :first_name, label: false, placeholder: 'First Name' %>
+    </div>
+    <div class="col-xs-12">
+    <%= f.input :last_name, label: false, placeholder: 'Last Name' %>
+    </div>
+    <div class="col-xs-12">
+    <%= f.input :email, label: false, placeholder: 'Email' %>
+    </div>
+    <div class="col-xs-12">
+    <%= f.input :phone, label: false, placeholder: 'Phone' %>
+    </div>
+    <div class="col-xs-12">
+    <%= f.input :credit_card, label: false, placeholder: 'Credit Card Number' %>
+    </div>
+    <div class="col-xs-6">
+    <%= f.input :exp_month, label: false, placeholder: 'MM' %>
+    </div>
+    <div class="col-xs-6">
+    <%= f.input :exp_year, label: false, placeholder: 'YYYY' %>
+    </div>
+    <div class="col-xs-12">
+    <br />
+    <br />
+    <%= f.submit 'Checkout', class: 'btn btn-block btn-success', disabled: (@cart.products.length == 0) ? true : false %>
+    <p class="help-block">By clicking checkout you are authorizing the Ocean Area Convention to charge your credit card for the total amount of your order</p>
+    </div>
+<% end %>
+<% end %>
+</div>
+
