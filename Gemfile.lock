@@ -159,6 +159,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   simple_form
   spring
+  sprockets-rails
   stripe!
   turbolinks
   uglifier (>= 1.3.0)
