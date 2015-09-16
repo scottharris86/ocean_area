@@ -2,7 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@media (max-width: 768px) {
+    .select-quantity {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        min-width: 40px !important;
+        margin-left: -10px;
+        margin-right: -10px;
+
+    }
+
+}
+
 .select-quantity {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
+    min-width: 40px !important;
+
 }
