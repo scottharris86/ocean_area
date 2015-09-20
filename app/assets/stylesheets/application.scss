@@ -22,10 +22,25 @@
     @import "carts";
     @import "orders";
 
-    html, body {
-        /*background-color: #f5f8fa;*/
+@media (min-width: 768px) {
+    html {
         height: 100%;
     }
+
+}
+html {
+    /*height: 100%;*/
+}
+
+body {
+    /*height: 100%;*/
+    background-color: #f5f8fa;
+    /*padding-bottom: 100px;*/
+}
+
+.homepage {
+    @include gradient-vertical(#3097d1, #8c66b2);
+}
 
 .navbar {
     /*height: 100px;*/

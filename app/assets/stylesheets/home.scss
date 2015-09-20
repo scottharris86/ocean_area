@@ -2,18 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-/*.main-img {
-    margin-top: -30px;
-    margin-left: -15px;
-    margin-right: -20px;
-    height: 610px;
-    width: 110%;
-    padding: 0px;
-}*/
-$white: #fff;
-
-body {
-    /*min-height: 600px;*/
-    @include gradient-vertical(#3097d1, #8c66b2);
+.background {
+    color: white;
+}
+.jumbotron {
+    background-color: transparent;
+    color: white;
 }

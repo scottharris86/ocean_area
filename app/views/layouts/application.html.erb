@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
   <title>OACC</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -7,7 +6,7 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body class="<%= @home_page ? 'homepage' : ''%>">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
