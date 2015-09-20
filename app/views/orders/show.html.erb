@@ -6,31 +6,33 @@
         <div class="col-xs-12 col-md-12">
             <div class="col-xs-12 col-md-12 box">
                 <div class="col-xs-12 col-md-8 col-md-push-4 right-stuff">
-                    <div class="col-xs-12 success-box">
+                    <div class="col-xs-12 success-box text-center">
                         <h3 class="text-success">Your order was successfully processed!</h3>
                         <h4 class="">Order Confirmation Number:<small> <%= @order.stripe_id %></small></h4>
                     </div>
                     <div class="col-xs-12">
-                        <div class="col-xs-12 col-md-6">
+                        <div class="col-xs-12">
                             <br />
                             <br />
-                            <a href="http://www.berkeleyhotelnj.com" class="text-center"><%= image_tag('berkley-logo.svg', class: 'img img-responsive') %></a>
+                            <a href="http://www.berkeleyhotelnj.com" class=""><%= image_tag('berkley-logo.svg', class: 'img img-responsive') %></a>
                         </div>
                     </div>
                     <div class="col-xs-12">
+                        <!-- <div class="col-xs- col-xs-offset-1"> -->
                         <address class="text-center">
                             <strong>THE BERKELEY OCEANFRONT HOTEL</strong><br />
                                     1401 Ocean Avenue<br />
                                     Asbury Park, NJ 07712<br />
                                 <a href="tel://7327766700">Phone: 732-776-6700</a>
                         </address>
+                        <!-- </div> -->
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4 col-md-pull-8 right-stuff">
                     <div class="col-xs-12">
-                        <h6>DIRECTIONS</h6>
+                        <h6 class="text-primary">DIRECTIONS</h6>
 
-                        <h6>FROM NORTH JERSEY, NY AREA:</h6>
+                        <!-- <h6 class="text-primary">FROM NORTH JERSEY, NY AREA:</h6>
                         <ul>
                         <li>-New Jersey Turnpike South to Exit 11 Garden State Parkway South</li>
                         <li>-Garden State Parkway to Exit 102 Asbury Ave Tinton Falls (bear right)</li>
@@ -43,7 +45,48 @@
                         <li>-Turn Left onto Ocean Ave</li>
                         <li>-Turn Left onto Sunset Ave</li>
                         <li>-Hotel Entrance will be on Right</li>
-                        </ul>
+                        </ul> -->
+                        <h5 class="text-primary">FROM NORTH JERSEY, NY AREA:</h5>
+                                  <p>
+                                   <i>-New Jersey Turnpike South to Exit 11 Garden State Parkway South</i><br>
+                                   <i>-Garden State Parkway to Exit 102 Asbury Ave Tinton Falls (bear right)</i><br>
+                                   <i>-Merge onto Asbury Ave.</i><br>
+                                   <i>-Continue onto NJ-35 S/RTE 35 S</i><br>
+                                   <i>-Turn Left onto NJ-35 N/RTE 35 N</i><br>
+                                   <i>-Slight right onto Asbury Ave</i><br>
+                                   <i>-Turn Left onto Kingsley St</i><br>
+                                   <i>-Turn Right onto 5th Ave</i><br>
+                                   <i>-Turn Left onto Ocean Ave</i><br>
+                                   <i>-Turn Left onto Sunset Ave</i><br>
+                                   <i>-Hotel Entrance will be on Right</i>
+                                   </p>
+
+                                   <h5 class="text-primary">FROM PHILADELPHIA AREA:</h5>
+                                   <p>
+                                   <i>-NJ Turnpike North to Exit 7A. </i><br>
+                                   <i>-Follow I-195 E Approximately One Half Hour to RTE 18 N</i><br>
+                                   <i>-Take RTE 18 N a Few Miles to Exit 10A/RTE 66/ Asbury Park</i><br>
+                                   <i>-Take RTE 18 N a Few Miles to Exit 10A/RTE 66/ Asbury Park</i><br>
+                                   <i>-Slight right onto Asbury Ave</i><br>
+                                   <i>-Turn Left onto Kingsley St</i><br>
+                                   <i>-Turn Right onto 5th Ave</i><br>
+                                   <i>-Turn Left onto Ocean Ave</i><br>
+                                   <i>-Turn Left onto Sunset Ave</i><br>
+                                   <i>-Hotel Entrance will be on Right</i>
+                                   </p>
+
+                                   <h5 class="text-primary">FROM SOUTH JERSEY AREA:</h5>
+                                   <p>
+                                   <i>-Garden State Parkway N to Exit 100-A/Asbury Park</i><br>
+                                   <i>-Follow Route 66/Asbury Ave Approximately 5 Miles to the Asbury Circle</i><br>
+                                   <i>-Take Second Exit on Right Off of the Circle to Asbury Ave (Coca Cola Building Will be on Your Right)</i><br>
+                                   <i>-Go Two Traffic Lights to Sunset Ave</i><br>
+                                   <i>-Turn Left onto Sunset Ave</i><br>
+                                   <i>-Hotel Entrance will be on Right</i><br>
+                        <br>
+
+                                   </p>
+
                     </div>
                 </div>
             </div>
