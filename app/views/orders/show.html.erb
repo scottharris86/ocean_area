@@ -3,6 +3,50 @@
     <div class="alert alert-<%= key %>"><%= value %></div>
 <% end %>
     <div class="row">
-        Order Confirmation Number: <%= @order.stripe_id %>
+        <div class="col-xs-12 col-md-12">
+            <div class="col-xs-12 col-md-12 box">
+                <div class="col-xs-12 col-md-8 col-md-push-4 right-stuff">
+                    <div class="col-xs-12 success-box">
+                        <h3 class="text-success">Your order was successfully processed!</h3>
+                        <h4 class="">Order Confirmation Number:<small> <%= @order.stripe_id %></small></h4>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-12 col-md-6">
+                            <br />
+                            <br />
+                            <a href="http://www.berkeleyhotelnj.com" class="text-center"><%= image_tag('berkley-logo.svg', class: 'img img-responsive') %></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <address class="text-center">
+                            <strong>THE BERKELEY OCEANFRONT HOTEL</strong><br />
+                                    1401 Ocean Avenue<br />
+                                    Asbury Park, NJ 07712<br />
+                                <a href="tel://7327766700">Phone: 732-776-6700</a>
+                        </address>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4 col-md-pull-8 right-stuff">
+                    <div class="col-xs-12">
+                        <h6>DIRECTIONS</h6>
+
+                        <h6>FROM NORTH JERSEY, NY AREA:</h6>
+                        <ul>
+                        <li>-New Jersey Turnpike South to Exit 11 Garden State Parkway South</li>
+                        <li>-Garden State Parkway to Exit 102 Asbury Ave Tinton Falls (bear right)</li>
+                        <li>-Merge onto Asbury Ave.</li>
+                        <li>-Continue onto NJ-35 S/RTE 35 S</li>
+                        <li>-Turn Left onto NJ-35 N/RTE 35 N</li>
+                        <li>-Slight right onto Asbury Ave</li>
+                        <li>-Turn Left onto Kingsley St</li>
+                        <li>-Turn Right onto 5th Ave</li>
+                        <li>-Turn Left onto Ocean Ave</li>
+                        <li>-Turn Left onto Sunset Ave</li>
+                        <li>-Hotel Entrance will be on Right</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
