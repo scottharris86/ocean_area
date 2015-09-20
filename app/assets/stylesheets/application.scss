@@ -22,8 +22,9 @@
     @import "carts";
     @import "orders";
 
-    body {
-        background-color: #f5f8fa;
+    html, body {
+        /*background-color: #f5f8fa;*/
+        height: 100%;
     }
 
 .navbar {
