@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>OACC</title>
+  <title>Ocean Area Convention</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -26,7 +26,7 @@
 
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">SCHEDULE</a></li>
+            <li><%= link_to 'SCHEDULE', schedule_index_path %></li>
             <li><%= link_to 'REGISTER', products_path %></li>
             <% if controller_name != 'home' %>
                 <li><%= link_to cart_path(@cart), class: 'fa fa-shopping-cart fa-lg', :data => { :no_turbolink => true } do %>
