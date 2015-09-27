@@ -17,7 +17,11 @@
                             <td><%= product.price %></td>
                             <td>
                                 <div class="col-xs-12 col-md-6 col-lg-4 pull-right">
-                                    <%= select_tag 'quantity', options_for_select(1..10, (@cart.itemizations.find_by(product_id: product.id) != nil) ? @cart.itemizations.find_by(product_id: product.id).quantity : 1), class: 'form-control input-sm select-quantity' %>
+                                    <% if product.id == 1 %>
+                                        <%= select_tag 'quantity', options_for_select([2,4,6,8,10], (@cart.itemizations.find_by(product_id: product.id) != nil) ? @cart.itemizations.find_by(product_id: product.id).quantity : 1), class: 'form-control input-sm select-quantity' %>
+                                    <% else %>
+                                        <%= select_tag 'quantity', options_for_select(1..10, (@cart.itemizations.find_by(product_id: product.id) != nil) ? @cart.itemizations.find_by(product_id: product.id).quantity : 1), class: 'form-control input-sm select-quantity' %>
+                                    <% end %>
 
                                 </div>
                             </td>
