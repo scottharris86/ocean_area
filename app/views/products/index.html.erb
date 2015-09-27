@@ -9,20 +9,13 @@
         <% end %>
         <div class="col-xs-12 col-md-4">
             <div class="col-xs-12 item-box">
-                <% if product.name == "pre-registration" %>
-                    <%= image_tag('bogo.jpg', width: '328', height: '218', class: 'img img-responsive') %>
-                <% elsif product.name == "friday game night" %>
-                    <%= image_tag('gameNight.jpg', width: '328', height: '218', class: 'img img-responsive') %>
-                <% elsif product.name == "comedy show" %>
-                    <%= image_tag('comedyShow.jpg', width: '328', height: '218', class: 'img img-responsive') %>
-                <% elsif product.name == "murder mystery" %>
-                    <%= image_tag('murderMystery.jpg', width: '328', height: '218', class: 'img img-responsive') %>
-                <% else %>
-                    <%= image_tag('Ticket.jpg', class: 'img img-responsive') %>
-                <% end %>
+                <%= image_tag("#{product.thumbnail}", width: '328', height: '218', class: 'img img-responsive') %>
+
+
                 <ul class="list-unstyled list-inline">
-                    <li><label><%= product.name %></label></li>
+                    <li><label class="text-capitalize"><%= product.name %></label></li>
                     <li class="pull-right"><label>$<%= product.price %></label></li>
+                    <li><small><%= product.description %></small></li>
 
                 </ul>
             </div>
