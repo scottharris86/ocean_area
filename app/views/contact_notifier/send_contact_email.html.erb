@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>You Recieved a Contact Request For: <%= @params[:type] %>!</h1>
+    <h3>From: <%= @params[:email] %></h3>
+    <p>Message: <%= @params[:message] %></p>
+  </body>
+</html>

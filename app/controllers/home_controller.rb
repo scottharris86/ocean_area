@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
     def index
-        @home_page = true
+      @home_page = true
     end
 end

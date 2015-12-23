@@ -27,8 +27,9 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to 'SCHEDULE', schedule_index_path %></li>
+            <li><%= link_to 'CONTACT', contact_index_path %></li>
             <li><%= link_to 'REGISTER', products_path %></li>
-            <% if controller_name != 'home' %>
+            <% if controller_name != 'home' && controller_name != 'contact' %>
                 <li><%= link_to cart_path(@cart), class: 'fa fa-shopping-cart fa-lg', :data => { :no_turbolink => true } do %>
                     <span class="badge"><%= @cart.product_count %></span>
                 <% end %>
