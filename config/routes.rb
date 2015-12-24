@@ -14,6 +14,8 @@ Rails.application.routes.draw do
    resources :schedule, only: [:index]
    resources :contact, only: [:index, :create]
 
+   get 'registration-pdf' => 'registration_pdf#index'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,0 +1,2 @@
+class RegistrationPdfController < ApplicationController
+end
