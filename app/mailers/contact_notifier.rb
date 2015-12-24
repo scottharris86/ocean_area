@@ -4,7 +4,7 @@ class ContactNotifier < ActionMailer::Base
 
   def send_contact_email(params)
     @params = params
-    mail(:to => ENV['MAIL_TO_ADDRESS'], :subject => @params[:type] + 'contact request')
+    mail(:to => ENV['MAIL_TO_ADDRESS'], :subject => @params[:type] + ' contact request')
   end
 
 end
