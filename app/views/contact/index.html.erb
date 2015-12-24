@@ -2,7 +2,7 @@
   <% flash.each do |key, value| %>
       <div id="flash_notice" class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
-  <%= form_tag(:contact_create, method: 'post', class: "form-horizontal") do %>
+  <%= form_tag('/contact', method: 'post', class: "form-horizontal") do %>
     <div class="form-group">
         <label for="type" class="col-sm-2 control-label">Type</label>
         <div class="col-sm-10">
