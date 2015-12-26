@@ -29,7 +29,6 @@
             <li><%= link_to 'SCHEDULE', schedule_index_path %></li>
             <li><%= link_to 'CONTACT', contact_index_path %></li>
             <li><%= link_to 'REGISTER', products_path %></li>
-            <li><%= link_to 'DOWNLOAD PDF', registration_pdf_path %></li>
             <li><%= link_to cart_path(@cart), class: 'fa fa-shopping-cart fa-lg', :data => { :no_turbolink => true } do %>
                     <span class="badge"><%= @cart.product_count %></span>
                 <% end %>
